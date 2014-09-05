@@ -21,6 +21,12 @@ class SuperherosController < ApplicationController
     end
   end
 
+  def destroy
+    @superhero = Superhero.find( params[:id] )
+    @superhero.destroy
+    redirect_to superheros_path
+  end
+
   private
   def superhero_params
     params.require( :superhero ).permit( :name, :cape, :super_power ) 
