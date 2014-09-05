@@ -27,6 +27,10 @@ class SuperherosController < ApplicationController
     redirect_to superheros_path
   end
 
+  def new
+    @superhero = Superhero.new
+  end
+
   private
   def superhero_params
     params.require( :superhero ).permit( :name, :cape, :super_power ) 

@@ -1,3 +1,5 @@
+<%= link_to 'Add new superhero', new_superhero_path %>
+
 <% @superheros.each do |superhero| %>
    <li><%= link_to superhero.name, superhero_path( superhero ) %></li> 
 <% end %>
