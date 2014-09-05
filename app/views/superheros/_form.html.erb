@@ -1,0 +1,14 @@
+<%= form_for @superhero do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :cape, "Does (s)he have a cape?" %>
+  <%= f.check_box :cape %>
+
+  <%= f.label :super_power %>
+  <%= f.text_field :super_power %>
+
+  <%= f.submit %>
+
+<% end %>
