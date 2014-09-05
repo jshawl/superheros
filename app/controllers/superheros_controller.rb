@@ -1,5 +1,7 @@
 class SuperherosController < ApplicationController
 
+  before_action :show, only: [ :edit, :update, :destroy ]
+
   def index
     @superheros = Superhero.all
   end
@@ -9,11 +11,9 @@ class SuperherosController < ApplicationController
   end
 
   def edit
-    @superhero = Superhero.find( params[:id] )
   end
 
   def update
-    @superhero = Superhero.find( params[:id] )
     if @superhero.update( superhero_params )
       redirect_to @superhero
     else
@@ -22,7 +22,6 @@ class SuperherosController < ApplicationController
   end
 
   def destroy
-    @superhero = Superhero.find( params[:id] )
     @superhero.destroy
     redirect_to superheros_path
   end
