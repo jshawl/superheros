@@ -65,7 +65,7 @@ img{
   max-width:100%;
 }
 
-dt, dd, label, input{
+dt, dd, label, input[type="text"]{
   display:block;
   padding:0;
   margin:0;
@@ -88,3 +88,14 @@ li{
   margin:1em 0;
 }
 
+.errors{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+.errors li{
+  border:3px solid #F16666;
+  border-radius:5px;
+  padding:.5em 1em;
+}

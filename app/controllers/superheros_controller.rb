@@ -17,7 +17,7 @@ class SuperherosController < ApplicationController
     if @superhero.update( superhero_params )
       redirect_to @superhero
     else
-      render 'form'
+      render 'edit'
     end
   end
 
@@ -35,7 +35,7 @@ class SuperherosController < ApplicationController
     if @superhero.save
       redirect_to @superhero
     else
-      render 'form'
+      render 'edit'
     end
   end
 
