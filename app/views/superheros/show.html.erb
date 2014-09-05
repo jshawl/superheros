@@ -1,5 +1,7 @@
 <h3><%= @superhero.name %></h3>
 
+<%= link_to 'Edit', edit_superhero_path( @superhero ) %>
+
 <dl>
   <dt>Has a cape?</dt>
   <dd><%= @superhero.cape ? "Yes" : "No" %></dd>
