@@ -31,9 +31,18 @@ class SuperherosController < ApplicationController
     @superhero = Superhero.new
   end
 
+  def create
+    @superhero = Superhero.new( superhero_params )
+    if @superhero.save
+      redirect_to @superhero
+    else
+      render 'form'
+    end
+  end
+
   private
   def superhero_params
-    params.require( :superhero ).permit( :name, :cape, :super_power ) 
+    params.require( :superhero ).permit( :name, :cape, :super_power, :image ) 
   end
 
 end
