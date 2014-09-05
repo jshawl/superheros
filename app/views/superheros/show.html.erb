@@ -1,6 +1,7 @@
 <h3><%= @superhero.name %></h3>
 
 <%= link_to 'Edit', edit_superhero_path( @superhero ) %>
+<%= link_to 'Delete', superhero_path( @superhero ), method: :delete %>
 
 <dl>
   <dt>Has a cape?</dt>
