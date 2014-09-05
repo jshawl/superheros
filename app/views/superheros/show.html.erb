@@ -1,0 +1,10 @@
+<h3><%= @superhero.name %></h3>
+
+<dl>
+  <dt>Has a cape?</dt>
+  <dd><%= @superhero.cape ? "Yes" : "No" %></dd>
+  <dt>Super Power:</dt>
+  <dd><%= @superhero.super_power %></dd>
+  <dt>Image</dt>
+  <dd><%= image_tag( @superhero.image, alt: "Image of #{@superhero.name}" ) %></dd>
+</dl>
