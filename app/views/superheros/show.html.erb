@@ -1,7 +1,4 @@
-<h3><%= @superhero.name %></h3>
-
-<%= link_to 'Edit', edit_superhero_path( @superhero ) %>
-<%= link_to 'Delete', superhero_path( @superhero ), method: :delete %>
+<h2><%= @superhero.name %></h2>
 
 <dl>
   <dt>Has a cape?</dt>
@@ -11,3 +8,6 @@
   <dt>Image</dt>
   <dd><%= image_tag( @superhero.image, alt: "Image of #{@superhero.name}" ) %></dd>
 </dl>
+
+<%= link_to 'Edit', edit_superhero_path( @superhero ), class: "cta" %>
+<%= link_to 'Delete', superhero_path( @superhero ), method: :delete, class: "cta" %>
